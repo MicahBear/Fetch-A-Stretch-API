@@ -135,8 +135,8 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:body', (request, response) => {
-    const bodyParts = request.params.bodyPart
+app.get('/api/:stretch', (request, response) => {
+    const bodyParts = request.params.stretch
     if (stretches[bodyParts]) {
         response.json(stretches[bodyParts])
     }

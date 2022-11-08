@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const PORT = 8000
 
 // const savage ={
@@ -7,6 +8,8 @@ const PORT = 8000
 //     'birthName': 'Sheyaa Bin Abraham-Joseph',
 //     'birthLocation': 'London, England'
 // }
+
+app.use(cors())
 
 const stretches = {
     'low back': {

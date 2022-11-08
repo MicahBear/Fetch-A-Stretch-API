@@ -142,8 +142,9 @@ app.get('/api/:stretch', (request, response) => {
     const bodyParts = request.params.stretch
     if (stretches[bodyParts]) {
         response.json(stretches[bodyParts])
+    } else {
+        response.json('No stretch')
     }
-    response.json('No stretch')
 })
 
 // app.get('/api', (request, response) => {

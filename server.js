@@ -138,12 +138,12 @@ app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.get('/api/:stretch', (request, response) => {
-    const bodyParts = request.params.stretch
+app.get('/api/:stretch', async (request, response) => {
+    const bodyParts = await request.params.stretch
     if (stretches[bodyParts]) {
         response.json(stretches[bodyParts])
     } else {
-        response.json('No stretch')
+        await response.json('No stretch')
     }
 })
 
